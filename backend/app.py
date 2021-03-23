@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-from data import Data
+from backend.data import Data
 app = FastAPI()
 
 @app.get('/')
