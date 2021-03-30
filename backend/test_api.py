@@ -1,6 +1,10 @@
 import requests
 
-url = "http://127.0.0.1:8000/personal"
-
-response = requests.post(url, json = {"name":"Alexander"})
-print(response.json())
+url = "http://127.0.0.1:8000"
+url1 = "https://sitesitesitesss.herokuapp.com"
+#response = requests.post(url1, data = {"name":"Alexander"})
+#print(response.json())
+def make_request(url, request):
+    response = requests.post(url, json = request)
+    return response.json()
+print(make_request(url1 + '/personal', {"name" : "Alex"}))
