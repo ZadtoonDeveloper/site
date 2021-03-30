@@ -1,13 +1,15 @@
 from fastapi import FastAPI
 import uvicorn
 from backend.data import Data, Rectangle, Triangle_90
-import time
+import datetime
 app = FastAPI()
 
 @app.get('/')
 def root():
     return f"Hello there"
-
+@app.get('/datetime')
+def show_time():
+    return f"{datetime.now()}"
 
 @app.post('/personal', status_code = 200)
 def personal_greetings(data: Data):

@@ -7,4 +7,8 @@ url1 = "https://sitesitesitesss.herokuapp.com"
 def make_request(url, request):
     response = requests.post(url, json = request)
     return response.json()
-print(make_request(url1 + '/personal', {"name" : "Alex"}))
+def make_get_post(url):
+    response = requests.get(url)
+    return response.json()
+#print(make_request(url1 + '/personal', {"name" : "Alex"}))
+print(make_get_post(url1 + '/datetime'))
