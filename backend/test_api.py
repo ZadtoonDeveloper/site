@@ -9,6 +9,6 @@ def make_request(url, request):
     return response.json()
 def make_get_post(url):
     response = requests.get(url)
-    return response.json()
+    return response.content
 #print(make_request(url1 + '/personal', {"name" : "Alex"}))
-print(make_get_post(url1 + '/datetime'))
+print(make_get_post(url + '/datetime'))

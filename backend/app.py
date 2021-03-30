@@ -9,7 +9,7 @@ def root():
     return f"Hello there"
 @app.get('/datetime')
 def show_time():
-    return f"{datetime.now()}"
+    return f"{datetime.datetime.today()}"
 
 @app.post('/personal', status_code = 200)
 def personal_greetings(data: Data):
